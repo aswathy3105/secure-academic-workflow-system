@@ -1,0 +1,87 @@
+/* Dark Theme for React Datepicker */
+.react-datepicker {
+  background-color: #0f172a !important; /* slate-950 */
+  border: 1px solid #1e293b !important; /* slate-800 */
+  border-radius: 1.5rem !important;
+  font-family: inherit !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  padding: 10px !important;
+}
+
+.react-datepicker__header {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid #1e293b !important;
+  border-top-left-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem !important;
+  padding-top: 15px !important;
+}
+
+.react-datepicker__current-month, 
+.react-datepicker-time__header, 
+.react-datepicker-year-header {
+  color: #f8fafc !important; /* slate-50 */
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-size: 0.75rem !important;
+}
+
+.react-datepicker__day-name {
+  color: #64748b !important; /* slate-500 */
+  font-weight: 700 !important;
+  font-size: 0.7rem !important;
+}
+
+.react-datepicker__day {
+  color: #94a3b8 !important; /* slate-400 */
+  border-radius: 0.75rem !important;
+  transition: all 0.2s !important;
+  font-weight: 600 !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #1e293b !important; /* slate-800 */
+  color: #f8fafc !important;
+}
+
+.react-datepicker__day--selected, 
+.react-datepicker__day--in-selecting-range, 
+.react-datepicker__day--in-range {
+  background-color: #2563eb !important; /* primary-600 */
+  color: #ffffff !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: rgba(37, 99, 235, 0.2) !important;
+  color: #2563eb !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #334155 !important; /* slate-700 */
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #64748b !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* Custom Input Styling */
+.datepicker-input {
+  width: 100%;
+  background-color: #020617; /* bg-slate-950 */
+  border: 1px solid #1e293b; /* border-slate-800 */
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.datepicker-input:focus {
+  border-color: #3b82f6; /* ring-primary-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
