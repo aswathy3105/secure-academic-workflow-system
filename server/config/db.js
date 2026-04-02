@@ -10,11 +10,21 @@ const connectDB = async () => {
     }
 
     console.log('Connecting to MongoDB Atlas...');
-    const conn = await mongoose.connect(uri, {
+    
+    // Log URI (masked) for debugging
+    const maskedUri = uri.replace(/:([^@]+)@/, ':****@');
+    console.log(`URI: ${maskedUri}`);
+
+    await mongoose.connect(uri, {
       dbName: 'secureAcademicDB'
     });
-    console.log(`MongoDB Atlas Connected Successfully: ${conn.connection.host}`);
-    console.log(`Database Name: ${conn.connection.name}`);
+
+    // Mongoose 6+ properties
+    const host = mongoose.connection.host || 'Cluster0';
+    const dbName = mongoose.connection.name || 'secureAcademicDB';
+
+    console.log(`✅ MongoDB Atlas Connected Successfully: ${host}`);
+    console.log(`✅ Database Name: ${dbName}`);
   } catch (error) {
     console.error(`❌ MongoDB Connection Error: ${error.message}`);
     process.exit(1);
